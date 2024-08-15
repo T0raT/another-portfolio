@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Add this CSS in your global stylesheet or a CSS module */
+@keyframes introAnimation {
+  0% {
+    height: 50%; /* Start with header and footer at 6/12 each (50%) */
+  }
+  50% {
+    height: 50%; /* Maintain the initial state */
+  }
+  100% {
+    height: 16.67%; /* Shrink to 2/12 each (16.67%) */
+  }
+}
+
+@keyframes mainGrow {
+  0% {
+    height: 0%; /* Start with main at 0% */
+  }
+  50% {
+    height: 0%; /* Maintain the initial state */
+  }
+  86% {
+    height: 72%;
+  }
+  88% {
+    height: 74%;
+  }
+  90% {
+    height: 76%;
+  }
+  92% {
+    height: 78%;
+  }
+  94% {
+    height: 80%;
+  }
+  96% {
+    height: 82%;
+  }
+  98% {
+    height: 82.68%;
+  }
+  100% {
+    height: 83.33%; /* Grow to 10/12 (83.33%) */
+  }
+}
+
+header,
+footer {
+  animation: introAnimation 1.5s ease-in-out forwards;
+}
+
+main {
+  animation: mainGrow 1.5s ease-in-out forwards;
+}
