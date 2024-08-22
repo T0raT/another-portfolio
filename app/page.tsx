@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { Noto_Serif_Display } from "next/font/google";
-import "../ui/static.css";
-import "../ui/text-effects.css";
+import "../components/ui/static.css";
+import "../components/ui/text-effects.css";
 const notoSansJP = Noto_Serif_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
