@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Noto_Serif_Display } from "next/font/google";
 import "../components/ui/static.css";
 import "../components/ui/text-effects.css";
+import { StarsBackground } from "@/components/ui/StarsBackground";
+import { ShootingStars } from "@/components/ui/ShootingStars";
 const notoSansJP = Noto_Serif_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -63,6 +65,8 @@ export default function Home() {
           <li className="inline-block ml-5">Tailwind CSS</li>
           <li className="inline-block ml-5">ThreeJS</li>
         </ul>
+        <StarsBackground />
+        <ShootingStars />
       </main>
       <footer className="z-100 animate-intro-shrink bg-[#3c3836]"></footer>
     </div>
