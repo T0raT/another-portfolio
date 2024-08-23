@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
-import { Noto_Serif_Display } from "next/font/google";
+import { Noto_Sans_Display } from "next/font/google";
 import "../components/ui/static.css";
 import "../components/ui/text-effects.css";
 import { StarsBackground } from "@/components/ui/StarsBackground";
 import { ShootingStars } from "@/components/ui/ShootingStars";
-const notoSansJP = Noto_Serif_Display({
+const notoSans = Noto_Sans_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -48,7 +48,7 @@ export default function Home() {
         </nav>
       </header>
       <main
-        className={`${notoSansJP.className} bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
+        className={`${notoSans.className} bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
       >
         {navHover && (
           <div className="absolute flex flex-col justify-center items-center w-full h-full z-30 backdrop-blur-lg text-5xl font-bold text-gruv-fg0">
