@@ -32,7 +32,6 @@ body {
   }
 }
 
-/* Add this CSS in your global stylesheet or a CSS module */
 @keyframes introAnimation {
   0% {
     height: 50%; /* Start with header and footer at 6/12 each (50%) */
