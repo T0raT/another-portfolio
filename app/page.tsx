@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
-import { Noto_Serif_Display } from "next/font/google";
+import { Noto_Sans_Display } from "next/font/google";
 import "../components/ui/static.css";
 import "../components/ui/text-effects.css";
-import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollision";
 import AboutMe from "@/pages/AboutMe";
-const notoSansJP = Noto_Serif_Display({
+import Head from "next/head";
+const notoSans = Noto_Sans_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -47,11 +47,13 @@ export default function Home() {
           </button>
         </nav>
       </header>
+
       <AboutMe
         navHover={navHover}
         hoveredItem={hoveredItem}
-        fontClass={notoSansJP.className}
+        fontClass={notoSans.className}
       />
+
       <footer className="z-100 animate-intro-shrink bg-[#3c3836]"></footer>
     </div>
   );
