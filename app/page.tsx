@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Noto_Sans_Display } from "next/font/google";
 import "../components/ui/static.css";
 import "../components/ui/text-effects.css";
-import AboutMe from "@/pages/AboutMe";
+import AboutMe from "@/app/AboutMe";
 import Head from "next/head";
 const notoSans = Noto_Sans_Display({
   subsets: ["latin"],
@@ -19,34 +19,34 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col">
+    <div className="font-futura w-screen h-screen flex flex-col">
       <header className="flex z-100 animate-intro-shrink bg-[#3c3836]">
         {/* Can use a loop to render this later I think */}
-        <nav
-          onMouseEnter={() => setNavHover(true)}
-          onMouseLeave={() => setNavHover(false)}
-          className="self-end flex justify-around py-4 tracking-in-expand-slow"
-        >
-          <button
-            className="text-gruv-fg0 text-xl ml-5 "
-            onMouseEnter={() => handleMouseEnter("About Me")}
-          >
-            About Me
-          </button>
-          <button
-            className="text-gruv-fg0 text-xl ml-5"
-            onMouseEnter={() => handleMouseEnter("Projects")}
-          >
-            Projects
-          </button>
-          <button
-            className="text-gruv-fg0 text-xl ml-5"
-            onMouseEnter={() => handleMouseEnter("Contact Me")}
-          >
-            Contact Me
-          </button>
-        </nav>
       </header>
+      <nav
+        onMouseEnter={() => setNavHover(true)}
+        onMouseLeave={() => setNavHover(false)}
+        className="self-end flex justify-around py-4 tracking-in-expand-slow"
+      >
+        <button
+          className="text-gruv-fg0 text-xl ml-5 "
+          onMouseEnter={() => handleMouseEnter("About Me")}
+        >
+          About Me
+        </button>
+        <button
+          className="text-gruv-fg0 text-xl ml-5"
+          onMouseEnter={() => handleMouseEnter("Projects")}
+        >
+          Projects
+        </button>
+        <button
+          className="text-gruv-fg0 text-xl ml-5"
+          onMouseEnter={() => handleMouseEnter("Contact Me")}
+        >
+          Contact Me
+        </button>
+      </nav>
 
       <AboutMe
         navHover={navHover}

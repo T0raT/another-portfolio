@@ -14,7 +14,7 @@ export default function AboutMe({
 }: AboutMeProps) {
   return (
     <main
-      className={`${fontClass} bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
+      className={`font-[] bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
     >
       {/* On hovering nav, sets nav render state to true.
        * On hovering nav item, sets item state to text of item.
@@ -25,8 +25,8 @@ export default function AboutMe({
           <h1 className="tracking-in-expand">{hoveredItem}</h1>
         </div>
       )}
-      <h1 className="z-10 m-auto my-0 gap-10 text-center text-5xl font-bold text-gruv-fg0 ">
-        Tiger Liu
+      <h1 className=" z-10 m-auto my-0 gap-10 text-8xl font-bold text-gruv-fg0 ">
+        tiger liu
       </h1>
       <ul className=" my-0 mt-10 text-xl self-center text-gruv-fg0 text-flicker-in-glow">
         <li className="inline-block">React</li>

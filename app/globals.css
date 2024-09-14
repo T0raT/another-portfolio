@@ -40,7 +40,7 @@ body {
     height: 50%; /* Maintain the initial state */
   }
   100% {
-    height: 150px; /* Shrink to 2/12 each (16.67%) */
+    height: 0; /* Shrink to 2/12 each (16.67%) */
   }
 }
 

@@ -12,6 +12,9 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      futura: ["futura pt", "ui-sans-serif", "system-ui"],
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
