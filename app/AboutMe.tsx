@@ -13,8 +13,9 @@ export default function AboutMe({
   fontClass,
 }: AboutMeProps) {
   return (
+    // NOTE: Main should ideally have a z index of 50 for all content
     <main
-      className={`font-[] bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
+      className={`font-futura bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
     >
       {/* On hovering nav, sets nav render state to true.
        * On hovering nav item, sets item state to text of item.

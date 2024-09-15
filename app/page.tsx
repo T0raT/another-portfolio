@@ -19,41 +19,46 @@ export default function Home() {
   };
 
   return (
-    <div className="font-futura w-screen h-screen flex flex-col">
+    <div className="font-futura w-screen h-screen flex flex-col relative">
       <header className="flex z-100 animate-intro-shrink bg-[#3c3836]">
         {/* Can use a loop to render this later I think */}
       </header>
       <nav
         onMouseEnter={() => setNavHover(true)}
         onMouseLeave={() => setNavHover(false)}
-        className="self-end flex justify-around py-4 tracking-in-expand-slow"
+        className="rounded-xl absolute z-[60] bg-[#3c3836] top-10 left-5 flex justify-center py-4 tracking-in-expand-slow"
       >
+        {/* Z index is 60 because <main> z index is 50 */}
         <button
-          className="text-gruv-fg0 text-xl ml-5 "
+          className="text-gruv-fg0 text-xl mx-3"
           onMouseEnter={() => handleMouseEnter("About Me")}
         >
           About Me
         </button>
         <button
-          className="text-gruv-fg0 text-xl ml-5"
+          className="text-gruv-fg0 text-xl mx-3 "
           onMouseEnter={() => handleMouseEnter("Projects")}
         >
           Projects
         </button>
         <button
-          className="text-gruv-fg0 text-xl ml-5"
+          className="text-gruv-fg0 text-xl mx-3 "
+          onMouseEnter={() => handleMouseEnter("Assignments")}
+        >
+          Assignments
+        </button>
+        <button
+          className="text-gruv-fg0 text-xl mx-3"
           onMouseEnter={() => handleMouseEnter("Contact Me")}
         >
           Contact Me
         </button>
       </nav>
-
       <AboutMe
         navHover={navHover}
         hoveredItem={hoveredItem}
         fontClass={notoSans.className}
       />
-
       <footer className="z-100 animate-intro-shrink bg-[#3c3836]"></footer>
     </div>
   );
