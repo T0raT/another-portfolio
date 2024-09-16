@@ -18,10 +18,10 @@ export const NaviBar = ({
     <nav
       onMouseEnter={() => setNavHover(true)}
       onMouseLeave={() => setNavHover(false)}
-      className="glass rounded-[0.3rem] absolute z-[60] bg-[#3c3836] top-10 left-5 flex justify-center py-4 tracking-in-expand-slow"
+      className="rounded-[0.5rem] absolute z-[60] bg-[#3c3836] top-10 left-5 flex justify-center py-4 tracking-in-expand-slow"
     >
       {/* Z index is 60 because <main> z index is 50 */}
-      <Link href="/" passHref>
+      <Link href="/" prefetch={true}>
         <p
           className="text-gruv-fg0 text-xl mx-3 cursor-pointer"
           onMouseEnter={() => setHoveredItem("About Me")}
@@ -37,7 +37,7 @@ export const NaviBar = ({
           Projects
         </p>
       </Link>
-      <Link href="/assignments" passHref>
+      <Link href="/assignments" prefetch={true}>
         <p
           className="text-gruv-fg0 text-xl mx-3 cursor-pointer"
           onMouseEnter={() => setHoveredItem("Assignments")}
