@@ -61,13 +61,6 @@ export default function Home() {
         <h1 className=" z-10 m-auto my-0 gap-10 text-5xl md:text-6xl lg:text-8xl font-bold text-gruv-fg0 ">
           tiger liu
         </h1>
-        {/* <ul className=" my-0 mt-10 text-xl self-center text-gruv-fg0 text-flicker-in-glow">
-        <li className="inline-block">React</li>
-        <li className="inline-block ml-5">NextJS</li>
-        <li className="inline-block ml-5">CSS</li>
-        <li className="inline-block ml-5">Tailwind CSS</li>
-        <li className="inline-block ml-5">ThreeJS</li>
-      </ul> */}
         <TypewriterEffect className="mt-8 text-gruv-yellow" words={words} />
         <ShootingStars />
         <StarsBackground />
