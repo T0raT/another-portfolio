@@ -1,38 +1,13 @@
 "use client";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Noto_Sans_Display } from "next/font/google";
-import "../components/css/text-effects.css";
-import { StarsBackground } from "@/components/ui/StarsBackground";
+import "../../components/ui/text-effects.css";
 import { ShootingStars } from "@/components/ui/ShootingStars";
-import { TypewriterEffect } from "@/components/ui/TypewriterEffect";
+import { StarsBackground } from "@/components/ui/StarsBackground";
 import { NaviBar } from "@/components/NaviBar";
 
-const notoSans = Noto_Sans_Display({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-export default function Home() {
-  const router = useRouter();
+export default function Assignments() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [navHover, setNavHover] = useState<boolean>(false);
-
-  const handleMouseEnter = (item: string) => {
-    setHoveredItem(item);
-  };
-
-  const words = [
-    // { text: "React" },
-    // { text: "Nextjs" },
-    // { text: "CSS" },
-    // { text: "TailwindCSS" },
-    // { text: "Threejs" },
-    { text: "Frontend" },
-    { text: "is" },
-    { text: "my" },
-    { text: "passion" },
-  ];
 
   return (
     <div className="font-futura w-screen h-screen flex flex-col relative">
@@ -40,10 +15,10 @@ export default function Home() {
         {/* Can use a loop to render this later I think */}
       </header>
       <NaviBar
-        navHover={navHover}
-        setNavHover={setNavHover}
-        hoveredItem={hoveredItem}
         setHoveredItem={setHoveredItem}
+        setNavHover={setNavHover}
+        navHover={navHover}
+        hoveredItem={hoveredItem}
       />
       <main
         className={`font-futura bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
@@ -57,8 +32,9 @@ export default function Home() {
             <h1 className="tracking-in-expand">{hoveredItem}</h1>
           </div>
         )}
+
         <h1 className=" z-10 m-auto my-0 gap-10 text-5xl md:text-6xl lg:text-8xl font-bold text-gruv-fg0 ">
-          tiger liu
+          Assignments page
         </h1>
         {/* <ul className=" my-0 mt-10 text-xl self-center text-gruv-fg0 text-flicker-in-glow">
         <li className="inline-block">React</li>
@@ -67,7 +43,6 @@ export default function Home() {
         <li className="inline-block ml-5">Tailwind CSS</li>
         <li className="inline-block ml-5">ThreeJS</li>
       </ul> */}
-        <TypewriterEffect className="mt-8 text-gruv-yellow" words={words} />
         <ShootingStars />
         <StarsBackground />
       </main>

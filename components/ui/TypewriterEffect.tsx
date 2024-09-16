@@ -66,13 +66,14 @@ export const TypewriterEffect = ({
             </div>
           );
         })}
+        {"\u{1F60E}"}
       </motion.div>
     );
   };
   return (
     <div
       className={cn(
-        "text-base sm:text-xl md:text-3xl lg:text-3xl font-bold text-center",
+        "text-base md:text-xl lg:text-3xl font-bold text-center",
         className
       )}
     >
@@ -90,7 +91,7 @@ export const TypewriterEffect = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "inline-block rounded-sm w-[4px] h-4 md:h-6 lg:h-6 lg:w-3 bg-blue-500",
+          "inline-block rounded-sm h-3 md:h-4 lg:h-6 lg:w-3 md:w-2 w-[0.4rem] bg-gruv-aqua",
           cursorClassName
         )}
       ></motion.span>
