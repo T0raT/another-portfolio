@@ -45,7 +45,7 @@ export default function AboutMe({
         <li className="inline-block ml-5">Tailwind CSS</li>
         <li className="inline-block ml-5">ThreeJS</li>
       </ul> */}
-      <TypewriterEffect className="mt-6 text-[2rem]" words={words} />
+      <TypewriterEffect className="mt-6 text-gruv-yellow" words={words} />
       <ShootingStars />
       <StarsBackground />
     </main>
