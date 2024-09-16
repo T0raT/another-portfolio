@@ -1,5 +1,6 @@
-"use client";
 import Link from "next/link";
+import "../components/css/glassmorphism.css";
+
 type NaviBarProps = {
   hoveredItem: string | null;
   setHoveredItem: (value: string | null) => void;
@@ -17,7 +18,7 @@ export const NaviBar = ({
     <nav
       onMouseEnter={() => setNavHover(true)}
       onMouseLeave={() => setNavHover(false)}
-      className="rounded-xl absolute z-[60] bg-[#3c3836] top-10 left-5 flex justify-center py-4 tracking-in-expand-slow"
+      className="glass rounded-[0.3rem] absolute z-[60] bg-[#3c3836] top-10 left-5 flex justify-center py-4 tracking-in-expand-slow"
     >
       {/* Z index is 60 because <main> z index is 50 */}
       <Link href="/" passHref>

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import "../../components/ui/text-effects.css";
 import { ShootingStars } from "@/components/ui/ShootingStars";
 import { StarsBackground } from "@/components/ui/StarsBackground";
 import { NaviBar } from "@/components/NaviBar";

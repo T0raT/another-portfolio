@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Noto_Sans_Display } from "next/font/google";
 import "../components/css/text-effects.css";
@@ -14,7 +15,7 @@ const notoSans = Noto_Sans_Display({
 });
 
 export default function Home() {
-  const router = useRouter();
+  const pathname = usePathname();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [navHover, setNavHover] = useState<boolean>(false);
 
@@ -46,7 +47,7 @@ export default function Home() {
         setHoveredItem={setHoveredItem}
       />
       <main
-        className={`font-futura bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
+        className={`bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
       >
         {/* On hovering nav, sets nav render state to true.
          * On hovering nav item, sets item state to text of item.

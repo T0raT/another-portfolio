@@ -58,9 +58,9 @@ body {
 
 header,
 footer {
-  animation: introAnimation 1.5s ease-in-out forwards;
+  animation: introAnimation 0.8s ease-in-out forwards;
 }
 
 main {
-  animation: mainGrow 1.5s ease-in-out forwards;
+  animation: mainGrow 0.8s ease-in-out forwards;
 }
