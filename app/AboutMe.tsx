@@ -1,5 +1,6 @@
 import { StarsBackground } from "@/components/ui/StarsBackground";
 import { ShootingStars } from "@/components/ui/ShootingStars";
+import { TypewriterEffect } from "@/components/ui/TypewriterEffect";
 
 type AboutMeProps = {
   hoveredItem: string | null;
@@ -12,6 +13,14 @@ export default function AboutMe({
   hoveredItem,
   fontClass,
 }: AboutMeProps) {
+  const words = [
+    { text: "React" },
+    { text: "Nextjs" },
+    { text: "CSS" },
+    { text: "TailwindCSS" },
+    { text: "Threejs" },
+  ];
+
   return (
     // NOTE: Main should ideally have a z index of 50 for all content
     <main
@@ -29,13 +38,14 @@ export default function AboutMe({
       <h1 className=" z-10 m-auto my-0 gap-10 text-8xl font-bold text-gruv-fg0 ">
         tiger liu
       </h1>
-      <ul className=" my-0 mt-10 text-xl self-center text-gruv-fg0 text-flicker-in-glow">
+      {/* <ul className=" my-0 mt-10 text-xl self-center text-gruv-fg0 text-flicker-in-glow">
         <li className="inline-block">React</li>
         <li className="inline-block ml-5">NextJS</li>
         <li className="inline-block ml-5">CSS</li>
         <li className="inline-block ml-5">Tailwind CSS</li>
         <li className="inline-block ml-5">ThreeJS</li>
-      </ul>
+      </ul> */}
+      <TypewriterEffect className="mt-6 text-[2rem]" words={words} />
       <ShootingStars />
       <StarsBackground />
     </main>
