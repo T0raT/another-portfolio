@@ -8,6 +8,7 @@ import { StarsBackground } from "@/components/ui/StarsBackground";
 import { ShootingStars } from "@/components/ui/ShootingStars";
 import { TypewriterEffect } from "@/components/ui/TypewriterEffect";
 import { NaviBar } from "@/components/NaviBar";
+import { TextHoverEffect } from "@/components/ui/TextHoverEffect";
 
 const notoSans = Noto_Sans_Display({
   subsets: ["latin"],
@@ -15,7 +16,6 @@ const notoSans = Noto_Sans_Display({
 });
 
 export default function Home() {
-  const pathname = usePathname();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [navHover, setNavHover] = useState<boolean>(false);
 
@@ -47,7 +47,7 @@ export default function Home() {
         setHoveredItem={setHoveredItem}
       />
       <main
-        className={`bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
+        className={`futura bg-gruv-bg0-h z-50 overflow-clip relative h-full flex flex-col justify-center`}
       >
         {/* On hovering nav, sets nav render state to true.
          * On hovering nav item, sets item state to text of item.
@@ -58,8 +58,8 @@ export default function Home() {
             <h1 className="tracking-in-expand">{hoveredItem}</h1>
           </div>
         )}
-        <h1 className=" z-10 m-auto my-0 gap-10 text-5xl md:text-6xl lg:text-8xl font-bold text-gruv-fg0 ">
-          tiger liu
+        <h1 className=" z-10 w-[50%] m-auto my-0 gap-10 text-5xl md:text-6xl lg:text-8xl font-bold text-gruv-fg0 ">
+          <TextHoverEffect text="Tiger Liu" />
         </h1>
         <TypewriterEffect className="mt-8 text-gruv-yellow" words={words} />
         <ShootingStars />

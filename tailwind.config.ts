@@ -13,7 +13,8 @@ const config: Config = {
   darkMode: ["class", "class"],
   theme: {
     fontFamily: {
-      futura: ["futura pt", "ui-sans-serif", "system-ui"],
+      futura: ['"futura-pt"', "ui-sans-serif"],
+      "futura-condensed": ["futura pt condensed", "ui-sans-serif"],
     },
     extend: {
       backgroundImage: {
