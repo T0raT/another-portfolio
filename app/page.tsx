@@ -15,7 +15,6 @@ const notoSans = Noto_Sans_Display({
 });
 
 export default function Home() {
-  const pathname = usePathname();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [navHover, setNavHover] = useState<boolean>(false);
 
