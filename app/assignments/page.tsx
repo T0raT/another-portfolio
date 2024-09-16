@@ -1,13 +1,35 @@
 "use client";
+import React from "react";
 import { useState } from "react";
-import { ShootingStars } from "@/components/ui/ShootingStars";
-import { StarsBackground } from "@/components/ui/StarsBackground";
 import { NaviBar } from "@/components/NaviBar";
 import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollision";
+import { cn } from "@/lib/utils";
+import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
+import {
+  IconArrowWaveRightUp,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeft,
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@tabler/icons-react";
 
 export default function Assignments() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [navHover, setNavHover] = useState<boolean>(false);
+
+  const Skeleton = () => (
+    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-800"></div>
+  );
+  const items = [
+    {
+      title: "The Dawn of Innovation",
+      description: "Explore the birth of groundbreaking ideas and inventions.",
+      header: <Skeleton />,
+      icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    },
+  ];
 
   return (
     <div className="font-futura w-screen h-screen flex flex-col relative">
@@ -30,9 +52,18 @@ export default function Assignments() {
             </div>
           )}
 
-          <h1 className=" z-10 m-auto my-0 gap-10 text-5xl md:text-6xl lg:text-8xl font-bold text-gruv-fg0 ">
-            Assignments page
-          </h1>
+          <BentoGrid className="max-w-4xl mx-auto z-20">
+            {items.map((item, i) => (
+              <BentoGridItem
+                key={i}
+                title={item.title}
+                description={item.description}
+                header={item.header}
+                icon={item.icon}
+                className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+              />
+            ))}
+          </BentoGrid>
         </BackgroundBeamsWithCollision>
       </main>
       <footer className="z-100 animate-intro-shrink bg-[#3c3836]"></footer>
