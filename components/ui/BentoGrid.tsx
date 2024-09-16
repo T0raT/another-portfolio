@@ -46,9 +46,16 @@ export const BentoGridItem = ({
         <div className="font-sans font-bold text-gruv-fg0 mb-2 mt-2">
           {title}
         </div>
-        <div className="font-sans font-normal text-gruv-aqua text-xs">
+        <div className="font-sans font-normal text-gruv-aqua text-xs mb-3">
           {description}
         </div>
+        <a
+          className="bg-gruv-blue1 hover:bg-gruv-aqua1 text-gruv-fg0 font-bold py-2 px-4 border-b-4 border-gruv-blue hover:border-gruv-aqua rounded"
+          href="https://github.com/T0raT/tigerliu-assignment-0"
+          target="_blank"
+        >
+          Github Link
+        </a>
       </div>
     </div>
   );

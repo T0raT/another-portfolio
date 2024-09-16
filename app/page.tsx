@@ -58,7 +58,7 @@ export default function Home() {
             <h1 className="tracking-in-expand">{hoveredItem}</h1>
           </div>
         )}
-        <h1 className=" z-10 m-auto my-0 gap-10 text-5xl md:text-6xl lg:text-8xl font-bold text-gruv-fg0 ">
+        <h1 className=" z-10 w-[50%] m-auto my-0 gap-10 text-5xl md:text-6xl lg:text-8xl font-bold text-gruv-fg0 ">
           <TextHoverEffect text="Tiger Liu" />
         </h1>
         <TypewriterEffect className="mt-8 text-gruv-yellow" words={words} />

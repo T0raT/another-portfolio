@@ -24,15 +24,15 @@ export default function Assignments() {
   );
   const items = [
     {
-      title: "The Dawn of Innovation",
-      description: "Explore the birth of groundbreaking ideas and inventions.",
+      title: "Assignment 0",
+      description: "CS506 dummy assignment! Hopefully this page is visible :)",
       header: <Skeleton />,
-      icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+      icon: "",
     },
   ];
 
   return (
-    <div className="font-futura w-screen h-screen flex flex-col relative">
+    <div className="futura w-screen h-screen flex flex-col relative">
       <header className="flex z-100 animate-intro-shrink bg-[#3c3836]">
         {/* Can use a loop to render this later I think */}
       </header>
@@ -47,7 +47,7 @@ export default function Assignments() {
       >
         <BackgroundBeamsWithCollision className={"h-full md:h-full dark"}>
           {navHover && (
-            <div className="absolute flex flex-col justify-center items-center w-full h-full z-30 backdrop-blur-lg text-5xl font-bold text-gruv-fg0">
+            <div className="absolute futura flex flex-col justify-center items-center w-full h-full z-30 backdrop-blur-lg text-5xl font-bold text-gruv-fg0">
               <h1 className="tracking-in-expand">{hoveredItem}</h1>
             </div>
           )}
