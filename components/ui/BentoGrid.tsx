@@ -20,19 +20,23 @@ export const BentoGrid = ({
   );
 };
 
+interface GridItemType {
+  className?: string;
+  title: string | React.ReactNode;
+  description: string | React.ReactNode;
+  header: React.ReactNode;
+  icon?: React.ReactNode;
+  github: string;
+}
+
 export const BentoGridItem = ({
   className,
   title,
   description,
   header,
   icon,
-}: {
-  className?: string;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
-  header?: React.ReactNode;
-  icon?: React.ReactNode;
-}) => {
+  github,
+}: GridItemType) => {
   return (
     <div
       className={cn(
@@ -51,7 +55,7 @@ export const BentoGridItem = ({
         </div>
         <a
           className="bg-gruv-blue1 hover:bg-gruv-aqua1 text-gruv-fg0 font-bold py-2 px-4 border-b-4 border-gruv-blue hover:border-gruv-aqua rounded"
-          href="https://github.com/T0raT/tigerliu-assignment-0"
+          href={github}
           target="_blank"
         >
           Github Link
