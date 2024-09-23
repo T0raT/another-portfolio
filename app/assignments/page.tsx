@@ -28,6 +28,15 @@ export default function Assignments() {
       description: "CS506 dummy assignment! Hopefully this page is visible :)",
       header: <Skeleton />,
       icon: "",
+      github: "https://github.com/T0raT/tigerliu-assignment-0",
+    },
+    {
+      title: "Assignment 1",
+      description:
+        "Using numpy, Matplotlib and pandas to find the most optimal position to get in a CDS elevator 😎",
+      header: <Skeleton />,
+      icon: "",
+      github: "https://github.com/T0raT/tigerliu-assignment-1",
     },
   ];
 
@@ -60,6 +69,7 @@ export default function Assignments() {
                 description={item.description}
                 header={item.header}
                 icon={item.icon}
+                github={item.github}
                 className={i === 3 || i === 6 ? "md:col-span-2" : ""}
               />
             ))}
