@@ -26,7 +26,6 @@ export default function Assignments() {
     {
       title: "Assignment 0",
       description: "CS506 dummy assignment! Hopefully this page is visible :)",
-      header: <Skeleton />,
       icon: "",
       github: "https://github.com/T0raT/tigerliu-assignment-0",
     },
@@ -34,9 +33,14 @@ export default function Assignments() {
       title: "Assignment 1",
       description:
         "Using numpy, Matplotlib and pandas to find the most optimal position to get in a CDS elevator 😎",
-      header: <Skeleton />,
       icon: "",
       github: "https://github.com/T0raT/tigerliu-assignment-1",
+    },
+    {
+      title: "Assignment 2",
+      description:
+        "Dynamic webapp that allows the user to step through K-Means visualization",
+      github: "https://github.com/T0raT/tigerliu-assignment-2",
     },
   ];
 
