@@ -38,6 +38,13 @@ export default function Assignments() {
       icon: "",
       github: "https://github.com/T0raT/tigerliu-assignment-1",
     },
+    {
+      title: "Assignment 2",
+      description:
+        "Dynamic webapp that allows the user to step through K-Means visualization",
+      header: <Skeleton />,
+      github: "https://github.com/T0raT/tigerliu-assignment-2",
+    },
   ];
 
   return (
