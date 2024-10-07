@@ -45,6 +45,13 @@ export default function Assignments() {
       header: <Skeleton />,
       github: "https://github.com/T0raT/tigerliu-assignment-2",
     },
+    {
+      title: "Assignment 3",
+      description:
+        "Using numpy and sklearn to visualize and analyze SVD dimensionality reduction.",
+      header: <Skeleton />,
+      github: "https://github.com/T0raT/tigerliu-assignment-3",
+    },
   ];
 
   return (
